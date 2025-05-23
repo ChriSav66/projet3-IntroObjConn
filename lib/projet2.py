@@ -108,13 +108,9 @@ def connecter_mqtt():
 
     io.connect()
 
-    io.subscribe('unite-temperature')
-    io.subscribe('reset-minmax')
+    io.subscribe('projet3.mode')
+    io.subscribe('projet3.quantite-nourriture')
     return io
-
-# Fonction à implémenter
-def celcius_to_fahrenheit(celcius: float) -> float:
-    return (celcius*9/5) + 32
 
 def getSocket():
  return socketpool.SocketPool(wifi.radio)
